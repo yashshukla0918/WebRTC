@@ -13,7 +13,7 @@ if (hasUserMedia()) {
       var video = document.querySelector('video'); 
 		
       //insert stream into the video tag 
-      	video.srcObject=stream;
+      	video.srcObject=stream ||  window.URL.createObjectURL(stream);
 	video.play();
    }, function (err) {}); 
 	
