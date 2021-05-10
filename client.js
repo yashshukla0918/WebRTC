@@ -6,7 +6,7 @@ function hasUserMedia() {
  
 if (hasUserMedia()) { 
    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia
-      || navigator.mediaDevices.getUserMedia || navigator.msGetUserMedia;
+      || navigator.mediaDevices || navigator.msGetUserMedia;
 		
    //get both video and audio streams from user's camera 
    navigator.getUserMedia({ video: true, audio: true }, function (stream) { 
